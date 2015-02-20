@@ -1,40 +1,70 @@
-<div class="row forecast-section">
-    <div class="col-md-12">
-        <div class="row" style="position:relative;">
-            <div id="time-ago" class="btn btn-primary btn-xs time-ago-button" style="position: absolute; top: 0; z-index: 2; left: 50%; margin-left: -50px;">Loading...</div>
-        </div>
-        <div class="row">
+<!doctype html>
+<html>
+    <head>
+        <title>MyWeather.Today Radar</title>
 
-            <div id="map" class="col-md-12">
+        /* Include Base CSS */
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="radar.css">
 
-            </div>
-        </div>
-        <div class="row">
-            <div class="radar-options">
-                <div class="row">
-                    <div class="col-md-12 map-control-btns">
-                        <div class="btn-group">
-                            <btn class="btn btn-primary progress-button"><i class="fa fa-backward"></i></btn>
-                            <btn class="btn btn-primary progress-button"><i class="fa fa-step-backward"></i></btn>
-                            <btn class="btn btn-primary progress-button"><i class="fa fa-play"></i></btn>
-                            <btn class="btn btn-primary progress-button"><i class="fa fa-step-forward"></i></btn>
-                            <btn class="btn btn-primary progress-button"><i class="fa fa-forward"></i></btn>
-                        </div>
-                        <div class="btn-group">
-                            <btn class="btn btn-primary progress-button"><i class="fa fa-location-arrow"></i></btn>
-                            <btn class="btn btn-primary progress-button"><i class="fa fa-arrow-circle-o-down"></i></btn>
-                        </div>
+        /* Require jQuery */
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+        /* Define Some Variables */
+        <script>
+            var locationLat = "LAT";
+            var locationLon = "LON";
+            var apiKey = "APIKEY";
+        </script>
+
+        /* Require Google Maps */
+        <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+        <script type="text/javascript">google.load("maps","3.9",{"other_params":"sensor=true&key=" . $apiKey});</script>
+        <script type="text/javascript">google.load("visualization","1");</script>
+
+        /* Require radar.js */
+        <script src="radar.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row" style="position:relative;">
+                        <div id="time-ago" class="btn btn-primary btn-xs time-ago-button" style="position: absolute; top: 0; z-index: 2; left: 50%; margin-left: -50px;">Loading...</div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="progress progress-radar">
-                            <div id="progress-bar-radar" class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0%; transition: width 0.6s linear 0s;">
+                    <div class="row">
+                        <div id="map" class="col-md-12"></div>
+                    </div>
+                    <div class="row">
+                        <div class="radar-options">
+                            <div class="row">
+                                <div class="col-md-12 map-control-btns">
+                                    <div class="btn-group">
+                                        <btn class="btn btn-primary progress-button"><i class="fa fa-backward"></i></btn>
+                                        <btn class="btn btn-primary progress-button"><i class="fa fa-step-backward"></i></btn>
+                                        <btn class="btn btn-primary progress-button"><i class="fa fa-play"></i></btn>
+                                        <btn class="btn btn-primary progress-button"><i class="fa fa-step-forward"></i></btn>
+                                        <btn class="btn btn-primary progress-button"><i class="fa fa-forward"></i></btn>
+                                    </div>
+                                    <div class="btn-group">
+                                        <btn class="btn btn-primary progress-button"><i class="fa fa-location-arrow"></i></btn>
+                                        <btn class="btn btn-primary progress-button"><i class="fa fa-arrow-circle-o-down"></i></btn>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="progress progress-radar">
+                                        <div id="progress-bar-radar" class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0%; transition: width 0.6s linear 0s;">
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
+    </body>
+</html>
