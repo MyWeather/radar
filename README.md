@@ -15,4 +15,4 @@ By default, radar already uses all of following on the main radar page:
 - radar.css
 
 ## More Info
-Eventually the readme will have implementation techniques and other stuff.
+Eventually the readme will have implementation techniques and other stuff. Also, eventually Radar will include lazy load so the page can load before the radar does, like other weather sites!
