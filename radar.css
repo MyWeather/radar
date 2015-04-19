@@ -3,8 +3,46 @@
  *  Radar CSS
  *
  */
+body{
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	margin-top: 20px;
+}
 
 #map {
-	width: 100%;
-	height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 600px;
+}
+
+.radar-options {
+    height: auto;
+    width: auto;
+    margin-top: 0px;
+    margin-bottom: -5px;
+}
+
+.progress-radar {
+    height: 6px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+/*    margin-bottom: 15px;*/
+}
+
+.progress-button {
+/*
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+*/
+}
+
+.map-control-btns {
+    text-align: center;
+    margin-top: -40px;
 }
