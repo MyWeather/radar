@@ -2,161 +2,15 @@ var map;
 function initialize() {
     var myLatLng = new google.maps.LatLng(-39.8333, 97.4167);
 
-    var darkStyle = [
-        {
-            "stylers": [
-                {
-                    "hue": "#ff1a00"
-                },
-                {
-                    "invert_lightness": true
-                },
-                {
-                    "saturation": -100
-                },
-                {
-                    "lightness": 33
-                },
-                {
-                    "gamma": 0.5
-                }
-            ]
-        },
-        {
-            "featureType": "water",
-            "elementType": "geometry",
-            "stylers": [
-                {
-                    "color": "#2D333C"
-                }
-            ]
-        }
-    ];
-
-    var lightStyle = [
-        {
-            "featureType": "administrative",
-            "elementType": "all",
-            "stylers": [
-                {
-                    "visibility": "simplified"
-                }
-            ]
-        },
-        {
-            "featureType": "administrative.country",
-            "elementType": "geometry.stroke",
-            "stylers": [
-                {
-                    "visibility": "on"
-                }
-            ]
-        },
-        {
-            "featureType": "administrative.province",
-            "elementType": "all",
-            "stylers": [
-                {
-                    "visibility": "on"
-                }
-            ]
-        },
-        {
-            "featureType": "landscape",
-            "elementType": "geometry",
-            "stylers": [
-                {
-                    "visibility": "simplified"
-                },
-                {
-                    "color": "#fcfcfc"
-                }
-            ]
-        },
-        {
-            "featureType": "poi",
-            "elementType": "geometry",
-            "stylers": [
-                {
-                    "visibility": "simplified"
-                },
-                {
-                    "color": "#fcfcfc"
-                }
-            ]
-        },
-        {
-            "featureType": "road.highway",
-            "elementType": "geometry",
-            "stylers": [
-                {
-                    "visibility": "simplified"
-                },
-                {
-                    "color": "#dddddd"
-                }
-            ]
-        },
-        {
-            "featureType": "road.arterial",
-            "elementType": "geometry",
-            "stylers": [
-                {
-                    "visibility": "simplified"
-                },
-                {
-                    "color": "#dddddd"
-                }
-            ]
-        },
-        {
-            "featureType": "road.local",
-            "elementType": "geometry",
-            "stylers": [
-                {
-                    "visibility": "simplified"
-                },
-                {
-                    "color": "#eeeeee"
-                }
-            ]
-        },
-        {
-            "featureType": "water",
-            "elementType": "geometry",
-            "stylers": [
-                {
-                    "visibility": "simplified"
-                },
-                {
-                    "color": "#dddddd"
-                }
-            ]
-        }
-    ];
-
-    var darkStyle = new google.maps.StyledMapType(darkStyle, {name: "Dark"});
-    var lightStyle = new google.maps.StyledMapType(lightStyle, {name: "Light"});
-
     var mapOptions = {
         zoom: 7,
         center: myLatLng,
         disableDefaultUI: true,
         zoomControl: true,
-        panControl: true,
-        mapTypeControl: true,
-        mapTypeControlOptions: {
-            style: google.maps.MapTypeControlStyle.DROPDOWN_MENU,
-            mapTypeIds: ['dark', 'light']
-        }
+        panControl: true
     };
+
     map = new google.maps.Map(document.getElementById('map'), mapOptions);
-
-    map.mapTypes.set('dark', darkStyle);
-    map.setMapTypeId('dark');
-
-    map.mapTypes.set('light', lightStyle);
-    map.setMapTypeId('light');
 
     //Load Images and add them to imageArray
     tileNEX = new google.maps.ImageMapType({
@@ -292,11 +146,9 @@ function initialize() {
     });
     map.overlayMapTypes.push(tileNEX50);
 
-    var image = 'http://preview.myweather.today/assets/img/icons/map-marker.png';
     var marker = new google.maps.Marker({
           position: myLatLng,
-          map: map,
-          icon: image
+          map: map
       });
 
     // Start radar animation
