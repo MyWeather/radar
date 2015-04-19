@@ -13,7 +13,7 @@ By default, radar already uses all of following on the main radar page:
 - radar.js
 - radar.css
 
-This app is basically *plug and play*, download the files, extract them in a folderm and open `index.html` and your show will be on the road.
+This app is basically *plug and play*, download the files, extract them in a folder and open `index.html` within your browser, and your show will be on the road.
 
 ## More Info
 Eventually the README will have implementation techniques and other stuff. Also, eventually Radar will include lazy load so the page can load before the radar does, like other weather sites!
