@@ -3,27 +3,20 @@
     <head>
         <title>MyWeather.Today Radar</title>
 
-        /* Include Base CSS */
+        <!-- Include Base CSS -->
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="radar.css">
 
-        /* Require jQuery */
+        <!-- Require jQuery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
-        /* Define Some Variables */
-        <script>
-            var locationLat = "LAT";
-            var locationLon = "LON";
-            var apiKey = "APIKEY";
-        </script>
-
-        /* Require Google Maps */
+        <!-- Require Google Maps -->
         <script type="text/javascript" src="http://www.google.com/jsapi"></script>
-        <script type="text/javascript">google.load("maps","3.9",{"other_params":"sensor=true&key=" . $apiKey});</script>
+        <script type="text/javascript">google.load("maps","3.9",{"other_params":"sensor=true"});</script>
         <script type="text/javascript">google.load("visualization","1");</script>
 
-        /* Require radar.js */
+        <!-- Require radar.js -->
         <script src="radar.js"></script>
     </head>
     <body>
