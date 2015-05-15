@@ -16,7 +16,6 @@ function initialize() {
     tileNEX = new google.maps.ImageMapType({
         getTileUrl: function(tile, zoom) {
             return "http://mesonet.agron.iastate.edu/cache/tile.py/1.0.0/nexrad-n0q-900913/" + zoom + "/" + tile.x + "/" + tile.y +".png?"+ (new Date()).getTime();
-//            return "http://myweather.app/radar/0/" + zoom + "/" + tile.x + "/" + tile.y +".png?" + (new Date()).getTime();
         },
         tileSize: new google.maps.Size(256, 256),
         opacity:0.00,
@@ -28,7 +27,6 @@ function initialize() {
     tileNEX5 = new google.maps.ImageMapType({
         getTileUrl: function(tile, zoom) {
             return "http://mesonet.agron.iastate.edu/cache/tile.py/1.0.0/nexrad-n0q-900913-m05m/" + zoom + "/" + tile.x + "/" + tile.y +".png?"+ (new Date()).getTime();
-//            return "http://myweather.app/radar/5/" + zoom + "/" + tile.x + "/" + tile.y +".png?" + (new Date()).getTime();
         },
         tileSize: new google.maps.Size(256, 256),
         opacity:0.00,
@@ -40,7 +38,6 @@ function initialize() {
     tileNEX10 = new google.maps.ImageMapType({
         getTileUrl: function(tile, zoom) {
             return "http://mesonet.agron.iastate.edu/cache/tile.py/1.0.0/nexrad-n0q-900913-m10m/" + zoom + "/" + tile.x + "/" + tile.y +".png?"+ (new Date()).getTime();
-//            return "http://myweather.app/radar/10/" + zoom + "/" + tile.x + "/" + tile.y +".png?" + (new Date()).getTime();
         },
         tileSize: new google.maps.Size(256, 256),
         opacity:0.00,
@@ -53,7 +50,6 @@ function initialize() {
     tileNEX15 = new google.maps.ImageMapType({
         getTileUrl: function(tile, zoom) {
              return "http://mesonet.agron.iastate.edu/cache/tile.py/1.0.0/nexrad-n0q-900913-m15m/" + zoom + "/" + tile.x + "/" + tile.y +".png?"+ (new Date()).getTime();
-//            return "http://myweather.app/radar/15/" + zoom + "/" + tile.x + "/" + tile.y +".png?" + (new Date()).getTime();
         },
         tileSize: new google.maps.Size(256, 256),
         opacity:0.00,
@@ -65,7 +61,6 @@ function initialize() {
     tileNEX20 = new google.maps.ImageMapType({
         getTileUrl: function(tile, zoom) {
              return "http://mesonet.agron.iastate.edu/cache/tile.py/1.0.0/nexrad-n0q-900913-m20m/" + zoom + "/" + tile.x + "/" + tile.y +".png?"+ (new Date()).getTime();
-//            return "http://myweather.app/radar/20/" + zoom + "/" + tile.x + "/" + tile.y +".png?" + (new Date()).getTime();
         },
         tileSize: new google.maps.Size(256, 256),
         opacity:0.00,
@@ -77,7 +72,6 @@ function initialize() {
     tileNEX25 = new google.maps.ImageMapType({
         getTileUrl: function(tile, zoom) {
              return "http://mesonet.agron.iastate.edu/cache/tile.py/1.0.0/nexrad-n0q-900913-m25m/" + zoom + "/" + tile.x + "/" + tile.y +".png?"+ (new Date()).getTime();
-//            return "http://myweather.app/radar/25/" + zoom + "/" + tile.x + "/" + tile.y +".png?" + (new Date()).getTime();
         },
         tileSize: new google.maps.Size(256, 256),
         opacity:0.00,
@@ -89,7 +83,6 @@ function initialize() {
     tileNEX30 = new google.maps.ImageMapType({
         getTileUrl: function(tile, zoom) {
              return "http://mesonet.agron.iastate.edu/cache/tile.py/1.0.0/nexrad-n0q-900913-m30m/" + zoom + "/" + tile.x + "/" + tile.y +".png?"+ (new Date()).getTime();
-//            return "http://myweather.app/radar/30/" + zoom + "/" + tile.x + "/" + tile.y +".png?" + (new Date()).getTime();
         },
         tileSize: new google.maps.Size(256, 256),
         opacity:0.00,
@@ -101,7 +94,6 @@ function initialize() {
     tileNEX35 = new google.maps.ImageMapType({
         getTileUrl: function(tile, zoom) {
              return "http://mesonet.agron.iastate.edu/cache/tile.py/1.0.0/nexrad-n0q-900913-m35m/" + zoom + "/" + tile.x + "/" + tile.y +".png?"+ (new Date()).getTime();
-//            return "http://myweather.app/radar/35/" + zoom + "/" + tile.x + "/" + tile.y +".png?" + (new Date()).getTime();
         },
         tileSize: new google.maps.Size(256, 256),
         opacity:0.00,
@@ -113,7 +105,6 @@ function initialize() {
     tileNEX40 = new google.maps.ImageMapType({
         getTileUrl: function(tile, zoom) {
              return "http://mesonet.agron.iastate.edu/cache/tile.py/1.0.0/nexrad-n0q-900913-m40m/" + zoom + "/" + tile.x + "/" + tile.y +".png?"+ (new Date()).getTime();
-//            return "http://myweather.app/radar/40/" + zoom + "/" + tile.x + "/" + tile.y +".png?" + (new Date()).getTime();
         },
         tileSize: new google.maps.Size(256, 256),
         opacity:0.00,
@@ -125,7 +116,6 @@ function initialize() {
     tileNEX45 = new google.maps.ImageMapType({
         getTileUrl: function(tile, zoom) {
              return "http://mesonet.agron.iastate.edu/cache/tile.py/1.0.0/nexrad-n0q-900913-m45m/" + zoom + "/" + tile.x + "/" + tile.y +".png?"+ (new Date()).getTime();
-//            return "http://myweather.app/radar/45/" + zoom + "/" + tile.x + "/" + tile.y +".png?" + (new Date()).getTime();
         },
         tileSize: new google.maps.Size(256, 256),
         opacity:0.00,
@@ -137,7 +127,6 @@ function initialize() {
     tileNEX50 = new google.maps.ImageMapType({
         getTileUrl: function(tile, zoom) {
              return "http://mesonet.agron.iastate.edu/cache/tile.py/1.0.0/nexrad-n0q-900913-m50m/" + zoom + "/" + tile.x + "/" + tile.y +".png?"+ (new Date()).getTime();
-//            return "http://myweather.app/radar/50/" + zoom + "/" + tile.x + "/" + tile.y +".png?" + (new Date()).getTime();
         },
         tileSize: new google.maps.Size(256, 256),
         opacity:0.00,
